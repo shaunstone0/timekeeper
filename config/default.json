@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://shaun1:s100s100@timekeeper-ejtms.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "tokenofallsecretsandthisneedstobesupersecretsohackersdontgetit"
-}
