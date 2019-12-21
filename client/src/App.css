@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primarycolor: #3c8dbc;
+  --linkhovercolor: #3985b1;
+  --linkbordercolor: #3b81aa;
+  --iconcolor: #f4e04d;
+  --light-color: #ffffff;
+  --dark-color: #343a40;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #eee;
+  min-height: 100%;
+}
+a {
+  color: var(--light-color);
+}
+
+ul {
+  list-style: none;
+}
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.lead {
+  font-size: 15px;
+  color: #888;
+}
+
+form label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+small {
+  border: 1px solid #ddd;
+  color: #888;
+  font-size: 12px;
+  width: 80%;
+  display: block;
+}
+
+small a {
+  color: #888;
+}
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  background: var(--dark-color);
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #5f6a75;
+}
+
+/* Forms */
+
+.form-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--light-color);
+  width: 80%;
+}
+
+.form .form-group {
+  margin: 1.2rem 0;
+}
+
+.form .form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  display: block;
+  width: 80%;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+}
+
+.form input[type='submit'],
+button {
+  font: inherit;
+}
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+.px {
+  padding: 0 0 1rem 0;
+}
+/* Margin */
+.m-center {
+  margin: 0 auto;
+}
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+/* Navigation */
+.navbar {
+  position: static;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: var(--primarycolor);
+  font-family: 'Open Sans';
+}
+
+.logo {
+  display: flex;
+  margin: 0 0 0 20px;
+  font-size: 20px;
+}
+
+.logo ion-icon {
+  color: var(--iconcolor);
+  font-size: 27px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar ul {
+  font-family: 'Open Sans';
+  display: flex;
+}
+
+.navbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #fff;
+  height: 100px;
+  width: 125px;
+  border-left: 1px solid var(--linkbordercolor);
+}
+
+.navbar ul li:hover {
+  background: var(--linkhovercolor);
+  box-shadow: 1px 0px 8px var(--dark-color);
+  cursor: pointer;
+}
+
+.navbar ul li ion-icon {
+  font-size: 23px;
+  margin: 0 10px 0 0;
+}
+
+/* Landing Page */
+
+.landing {
+  min-width: 100%;
+  height: 80vh;
+  font-size: 13px;
+}
+
+.inner-landing {
+  position: relative;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.landing-info {
+  display: flex;
+  width: 100%;
+}
+.landing-info ion-icon {
+  font-size: 20px;
+  padding: 0 0.5rem 0 0;
+}
+
+.new-user-reg-icon {
+  display: flex;
+  width: 100%;
+}
+.new-user-reg-icon ion-icon {
+  font-size: 20px;
+  padding: 0 0.5rem 0 0;
+}
+.landing-register {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border-right: 1px solid #ccc;
+}
+
+.landing-register a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.new-user-reg {
+  border-top: 1px solid #ccc;
+}
+
+/* Register Page */
+.left-side-register {
+  width: 50%;
+  margin: 0;
+}
+.left-side-register img {
+  width: 80%;
+}
+
+/* Login */
