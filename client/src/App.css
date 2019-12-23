@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 :root {
   --primarycolor: #3c8dbc;
   --linkhovercolor: #3985b1;
-  --linkbordercolor: #3b81aa;
+  --linkbordercolor: #408caf;
   --iconcolor: #f4e04d;
   --light-color: #ffffff;
   --dark-color: #343a40;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --icon-color: #888;
 }
 
 /* Global Styles */
@@ -17,10 +18,12 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #eee;
+  background-image: url('./img/background/homeback.jpg');
+  background-repeat: no-repeat;
   min-height: 100%;
 }
 a {
@@ -68,7 +71,25 @@ small {
 small a {
   color: #888;
 }
-/* Buttons */
+
+.dashboard-header {
+  color: #fff;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px -1px #999;
+}
+
+i {
+}
+/* Buttons and Alerts */
 
 .btn {
   display: inline-block;
@@ -87,6 +108,62 @@ small a {
 
 .btn:hover {
   background-color: #5f6a75;
+}
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
 }
 
 /* Forms */
@@ -171,46 +248,45 @@ button {
   margin: 3rem;
 }
 .my {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
 }
 .my-1 {
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 .my-2 {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
 }
 .my-3 {
-  margin: 3rem 0;
+  margin: 3rem 0 0;
 }
 
 /* Navigation */
 .navbar {
   position: static;
-  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  background: var(--primarycolor);
-  font-family: 'Open Sans';
+  /* background: var(--primarycolor); */
+  font-family: 'Poppins';
+  height: 70px;
 }
 
 .logo {
-  display: flex;
   margin: 0 0 0 20px;
   font-size: 20px;
+  line-height: 0;
 }
 
-.logo ion-icon {
-  color: var(--iconcolor);
-  font-size: 27px;
+.logo img {
+  height: 20px;
 }
 .navbar a {
   text-decoration: none;
   color: #fff;
 }
 .navbar ul {
-  font-family: 'Open Sans';
+  font-family: 'Poppins';
   display: flex;
 }
 
@@ -220,7 +296,6 @@ button {
   justify-content: center;
   font-size: 15px;
   color: #fff;
-  height: 100px;
   width: 125px;
   border-left: 1px solid var(--linkbordercolor);
 }
@@ -237,63 +312,35 @@ button {
 }
 
 /* Landing Page */
-
 .landing {
-  min-width: 100%;
   height: 80vh;
-  font-size: 13px;
+}
+.landing-grid {
+  display: flex;
+}
+.landing-box {
+  width: 50%;
+  margin: 5rem 0 0 1rem;
+}
+.landing-box .btn {
+  margin: 10px 0 5px 10px;
+}
+.landing-header {
+  font-size: 17px;
+  border-bottom: 1px solid #eee;
+  padding: 0 20px 5px 10px;
 }
 
-.inner-landing {
-  position: relative;
-  top: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-}
-.landing-info {
-  display: flex;
-  width: 100%;
-}
-.landing-info ion-icon {
-  font-size: 20px;
-  padding: 0 0.5rem 0 0;
-}
-
-.new-user-reg-icon {
-  display: flex;
-  width: 100%;
-}
-.new-user-reg-icon ion-icon {
-  font-size: 20px;
-  padding: 0 0.5rem 0 0;
-}
-.landing-register {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  border-right: 1px solid #ccc;
-}
-
-.landing-register a {
-  color: var(--light-color);
+.landing-box a {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 13px;
 }
-
-.new-user-reg {
-  border-top: 1px solid #ccc;
+.landing-desc {
+  text-align: justify;
+  font-size: 14px;
+  color: #74788d;
+  padding: 0 20px 0 10px;
 }
 
 /* Register Page */
-.left-side-register {
-  width: 50%;
-  margin: 0;
-}
-.left-side-register img {
-  width: 80%;
-}
 
 /* Login */

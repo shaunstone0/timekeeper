@@ -1,8 +1,13 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
+import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
+import PropTypes from 'prop-types';
+
 import Time from '../../img/icons/time.svg';
 
-const Register = () => {
+const Register = ({ setAlert, register, isAuthenticated }) => {
   // Set State Hook
   const [formData, setFormData] = useState({
     firstname: '',
@@ -20,11 +25,21 @@ const Register = () => {
   const onSubmit = e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('Password Not Match');
+      setAlert('Password Not Match', 'danger');
     } else {
-      console.log(formData);
+      register({
+        firstname,
+        lastname,
+        email,
+        password,
+        password2
+      });
     }
   };
+
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
   return (
     <Fragment>
       <div className='form-container p-2 m-center'>
@@ -45,7 +60,6 @@ const Register = () => {
                 name='firstname'
                 value={firstname}
                 onChange={e => onChange(e)}
-                required
               />
               <label>Last Name*</label>
               <input
@@ -53,7 +67,6 @@ const Register = () => {
                 name='lastname'
                 value={lastname}
                 onChange={e => onChange(e)}
-                required
               />
             </div>
             <div className='form-group'>
@@ -63,7 +76,6 @@ const Register = () => {
                 name='email'
                 value={email}
                 onChange={e => onChange(e)}
-                required
               />
               <small className='my p'>
                 This Website uses Gravatar, so please use an email that is
@@ -76,7 +88,6 @@ const Register = () => {
               <input
                 type='password'
                 name='password'
-                minLength='6'
                 value={password}
                 onChange={e => onChange(e)}
               />
@@ -84,7 +95,6 @@ const Register = () => {
               <input
                 type='password'
                 name='password2'
-                minLength='6'
                 value={password2}
                 onChange={e => onChange(e)}
               />
@@ -99,4 +109,13 @@ const Register = () => {
   );
 };
 
-export default Register;
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+export default connect(mapStateToProps, { setAlert, register })(Register);

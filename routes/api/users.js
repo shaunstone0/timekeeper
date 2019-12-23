@@ -15,7 +15,10 @@ router.post(
   '/',
   [
     //   Express Validation
-    check('name', 'Name is Required')
+    check('firstname', 'Name is Required')
+      .not()
+      .isEmpty(),
+    check('lastname', 'Name is Required')
       .not()
       .isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
@@ -29,7 +32,7 @@ router.post(
     }
 
     // Destruct req.body
-    const { name, email, password } = req.body;
+    const { firstname, lastname, email, password } = req.body;
 
     try {
       // See if User Exists
@@ -50,7 +53,8 @@ router.post(
 
       // Establish new User NOT SAVE
       user = new User({
-        name,
+        firstname,
+        lastname,
         email,
         avatar,
         password
