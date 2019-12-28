@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
-import Time from '../../img/icons/time.svg';
+import logo from '../../img/icons/time.svg';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   // Set State Hook
@@ -42,66 +42,81 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
   return (
     <Fragment>
-      <div className='form-container p-2 m-center'>
-        <div className='left-side-register'>
-          <img src={Time} alt='time-icon' />
-        </div>
-        <div>
+      <div className='inner-container m-center'>
+        <div className='form-container m-center'>
+          <div className='text-center login-logo'>
+            <span className='bold'>Time</span>Keeper
+            <img src={logo} alt='TK logo' />
+          </div>
           <h1>Register a TimeKeeper Account</h1>
-          <p className='lead'>
-            <ion-icon name='person-add' /> Your Login Informaton
-          </p>
 
-          <form className='form' onSubmit={e => onSubmit(e)}>
+          <form className='form m-center' onSubmit={e => onSubmit(e)}>
             <div className='form-group'>
-              <label>First Name*</label>
               <input
                 type='text'
                 name='firstname'
                 value={firstname}
+                placeholder='First Name'
                 onChange={e => onChange(e)}
               />
-              <label>Last Name*</label>
+            </div>
+            <div className='form-group'>
               <input
                 type='text'
                 name='lastname'
                 value={lastname}
+                placeholder='Last Name'
                 onChange={e => onChange(e)}
               />
             </div>
             <div className='form-group'>
-              <label>Email *</label>
               <input
                 type='email'
                 name='email'
                 value={email}
+                placeholder='Email'
                 onChange={e => onChange(e)}
               />
-              <small className='my p'>
+              <small className='p m-center'>
                 This Website uses Gravatar, so please use an email that is
                 associated with a Gravatar. If you dont have one, you can create
-                one <Link to='http://en.gravatar.com/'>here</Link>
+                one{' '}
+                <a
+                  href='http://en.gravatar.com/'
+                  target='_blank'
+                  rel=' noopener noreferrer'
+                >
+                  <span className='bold'>here</span>
+                </a>
               </small>
             </div>
             <div className='form-group'>
-              <label>Password*</label>
               <input
                 type='password'
                 name='password'
                 value={password}
+                placeholder='Password'
                 onChange={e => onChange(e)}
               />
-              <label>Confirm Password*</label>
+            </div>
+            <div className='form-group'>
               <input
                 type='password'
                 name='password2'
                 value={password2}
+                placeholder='Confirm Password'
                 onChange={e => onChange(e)}
               />
             </div>
             <button type='submit' className='btn'>
               Sign Up
             </button>
+            <div className='have-account text-center'>
+              Already have an account?{' '}
+              <Link to='/'>
+                <span className='bold m'> Login</span>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

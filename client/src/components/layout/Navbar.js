@@ -2,15 +2,17 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import logo from '../../img/icons/logo.svg';
+import logo from '../../img/icons/time-light.svg';
 import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
-      <a onClick={logout} href='#!'>
-        <li>Logout</li>
-      </a>
+      <Link onClick={logout} to='/'>
+        <li>
+          Logout <i className='fas fa-sign-out-alt'></i>
+        </li>
+      </Link>
     </ul>
   );
 
@@ -22,7 +24,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           Register
         </li>
       </Link>
-      <Link to='/login'>
+      <Link to='/'>
         <li>
           <ion-icon name='log-in' />
           Login
@@ -34,7 +36,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <div>
       <nav className='navbar'>
-        <div className='logo'>
+        <div className='light-logo'>
           <Link to='/'>
             <span className='bold'>Time</span>Keeper
             <img src={logo} alt='logo' />
