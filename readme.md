@@ -6,6 +6,10 @@
 
 ### Built with the MERN (MongoDB Atlas, Express, React, Node.js) Stack
 
+### NodeJS Development
+
+---
+
 #### Dependencies
 
 - Express
@@ -41,3 +45,7 @@
 - Nodemon
 
   to Run the Node.js API in Development
+
+### Front End / React Development
+
+---
