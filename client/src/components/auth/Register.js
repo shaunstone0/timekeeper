@@ -69,7 +69,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                 onChange={e => onChange(e)}
               />
             </div>
-            <div className='form-group'>
+            <div className='form-group email'>
               <input
                 type='email'
                 name='email'

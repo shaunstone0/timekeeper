@@ -8,6 +8,12 @@ import { logout } from '../../actions/auth';
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
+      <Link to='/'>
+        <li>
+          <ion-icon name='dashboard' />
+          Dashboard
+        </li>
+      </Link>
       <Link onClick={logout} to='/'>
         <li>
           Logout <i className='fas fa-sign-out-alt'></i>

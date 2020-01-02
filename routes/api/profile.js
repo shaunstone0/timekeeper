@@ -36,12 +36,6 @@ router.post(
   [
     auth,
     [
-      check('firstname', 'Your first name is required')
-        .not()
-        .isEmpty(),
-      check('lastname', 'Your last name is required')
-        .not()
-        .isEmpty(),
       check('gender', 'please select a gender')
         .not()
         .isEmpty()
@@ -57,8 +51,6 @@ router.post(
       gender,
       nationality,
       phone,
-      firstname,
-      lastname,
       street,
       city,
       state,
@@ -74,10 +66,6 @@ router.post(
     if (gender) profileFields.gender = gender;
     if (nationality) profileFields.nationality = nationality;
     if (phone) profileFields.phone = phone;
-
-    profileFields.name = {};
-    if (firstname) profileFields.name.firstname = firstname;
-    if (lastname) profileFields.name.lastname = lastname;
 
     profileFields.address = {};
     if (street) profileFields.address.street = street;
