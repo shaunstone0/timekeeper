@@ -10,31 +10,34 @@
 
 - Express
 
-  ... Used with Node.js as the web framework ...
+  Used with Node.js as the web framework
 
 - Express-Validator
 
-  ... Middleware used with Express...
+  Middleware used with Express
 
 - Mongoose
 
-  ... For Database Connection and Models for the NoSQL Database...
+  For Database Connection and Models for the NoSQL Database
 
 - Json Web Token
 
-  ... For user Authentication...
+  For user Authentication
 
 - Bcryptjs
 
-  ... For hashing the password provided by the user ...
+  For hashing the password provided by the user
 
 - Config
 
-  ... To keep the data safe...
+  To keep the data safe
 
 #### Dev Dependencies
 
 - Concurrently
-  ... To run both React and Node.js Together...
+
+  To run both React and Node.js Together
+
 - Nodemon
-  ... to Run the Node.js API in Development ...
+
+  to Run the Node.js API in Development
