@@ -6,6 +6,11 @@
 
 ### Built with the MERN (MongoDB Atlas, Express, React, Node.js) Stack
 
+\*\* The Project is missing the Config folder, I removed it and added it to `.gitignore`. The file contained passwords and the JWT secret to hash the password.
+you must add it back in under the root directory where the api is stored.
+
+---
+
 ### NodeJS Development
 
 ---
@@ -16,25 +21,37 @@
 
   Used with Node.js as the web framework
 
-- Express-Validator
+  > `npm install express`
+
+* Express-Validator
 
   Middleware used with Express
 
-- Mongoose
+  > `npm install express-validator`
+
+* Mongoose
 
   For Database Connection and Models for the NoSQL Database
 
-- Json Web Token
+  > `npm install mongoose`
+
+* Json Web Token
 
   For user Authentication
 
-- Bcryptjs
+  > `npm install jasonwebtoken`
+
+* Bcryptjs
 
   For hashing the password provided by the user
 
-- Config
+  > `npm install bcryptjs`
+
+* Config
 
   To keep the data safe
+
+  > `npm install config`
 
 #### Dev Dependencies
 
@@ -42,10 +59,60 @@
 
   To run both React and Node.js Together
 
+  > `npm install concurrently`
+
 - Nodemon
 
   to Run the Node.js API in Development
 
+  > `npm install nodemon`
+
+---
+
 ### Front End / React Development
 
 ---
+
+- Create-React-App
+
+  Boiler Template for React Project
+
+  > `npx create-react-app`
+
+- Redux
+
+  Reducer for React Project
+
+  > `npm redux`
+
+  > `npm redux-thunk`
+
+- Axios
+
+  For HTTP Requests
+
+  > `npm install axios`
+
+- Moment
+
+  For Dealing with Time and Dates
+
+  > `npm isntall moment`
+
+- UUID
+
+  Generate Random ID's with a quick method
+
+  > `npm install uuid`
+
+---
+
+### License
+
+---
+
+This project is under a MIT License.
+
+---
+
+Feel free to fork or pull this project, and review my code. I am open to any constructive opinions! I am new to authentication- and this is my first full stack application. Let me know what you think!
