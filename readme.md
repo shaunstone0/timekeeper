@@ -9,16 +9,27 @@
 #### Dependencies
 
 - Express
+
   ... Used with Node.js as the web framework ...
+
 - Express-Validator
+
   ... Middleware used with Express...
+
 - Mongoose
+
   ... For Database Connection and Models for the NoSQL Database...
+
 - Json Web Token
+
   ... For user Authentication...
+
 - Bcryptjs
+
   ... For hashing the password provided by the user ...
+
 - Config
+
   ... To keep the data safe...
 
 #### Dev Dependencies
