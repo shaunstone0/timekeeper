@@ -24,6 +24,7 @@ const EditProfile = ({
 
   useEffect(() => {
     getCurrentProfile();
+
     setFormData({
       gender: loading || !profile.gender ? '' : profile.gender,
       nationality: loading || !profile.nationality ? '' : profile.nationality,
@@ -35,19 +36,7 @@ const EditProfile = ({
       license: loading || !profile.driver.license ? '' : profile.driver.license,
       car: loading || !profile.driver.car ? '' : profile.driver.car
     });
-  }, [
-    loading,
-    getCurrentProfile,
-    profile.address.city,
-    profile.address.state,
-    profile.address.street,
-    profile.address.zip,
-    profile.driver.car,
-    profile.driver.license,
-    profile.gender,
-    profile.nationality,
-    profile.phone
-  ]);
+  }, [loading, getCurrentProfile]);
 
   const {
     gender,
@@ -73,7 +62,7 @@ const EditProfile = ({
     <Fragment>
       <div className='dashboard-card card'>
         <div className='form-container m-center'>
-          <div className='dash-form-header-big'>
+          <div className=''>
             <h1>Employee Profile</h1>
             <small>Update your Employee Profile</small>
             <i className='fas fa-user-cog'></i>

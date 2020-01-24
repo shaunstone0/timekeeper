@@ -21,7 +21,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: #eee;
-  background-image: url('./img/background/homeback.jpg');
+  background: url('./img/background/homeback.jpg');
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -84,10 +84,10 @@ small a {
 
 .card {
   background: #fff;
-  padding: 1.4rem;
+  padding: 1.2rem;
   font-size: 14px;
   border-radius: 5px;
-  box-shadow: 0 2px 10px -1px #999;
+  box-shadow: 0 2px 10px -4px #999;
 }
 
 .text-center {
@@ -268,7 +268,6 @@ button {
 
 /* Navigation */
 .navbar {
-  position: static;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -276,6 +275,7 @@ button {
   font-family: 'Poppins';
   height: 70px;
   border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  z-index: 1;
 }
 
 .logo {
@@ -460,132 +460,3 @@ button {
 }
 
 /* Dashboard */
-
-.dash-component-body {
-  padding: 10px;
-}
-
-.dash-component-details {
-  display: flex;
-  align-items: center;
-  margin: 0.2rem 0;
-  font-size: 12px;
-}
-
-.dash-component-details i {
-  font-size: 14px;
-  margin: 0 0.2rem 0 0;
-}
-
-.dashboard-card {
-  font-family: 'Poppins', Helvetica, sans-serif;
-  margin: 4rem 0;
-}
-
-.dashboard-card img {
-  width: 90px;
-  border-radius: 10px;
-}
-
-.dash-user-name {
-  font-size: 17px;
-  font-weight: 500;
-  margin: 0 0 0 0.8rem;
-  line-height: 25px;
-  color: #595d6e;
-}
-
-.dashboard-card .form input[type='text'],
-.dashboard-card .form input[type='email'],
-.dashboard-card .form input[type='password'],
-.dashboard-card .form input[type='date'],
-.dashboard-card .form select,
-.dashboard-card .form textarea {
-  width: 100%;
-  margin: 0.5rem 0 0 0;
-  border-radius: 0;
-  padding: 0.6rem;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  background: #fff;
-  border: 1px solid #eee;
-}
-
-.dash-form-header-big {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  width: 100%;
-  margin: 0 0 3rem 0;
-}
-
-.dash-form-header-big i {
-  font-size: 20px;
-  justify-self: flex-end;
-}
-.dashboard-card h1 {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.dashboard-card small {
-  width: 77%;
-  border: none;
-  margin: 0 0 0 1rem;
-}
-.dashboard-card .form-group {
-  margin: 0.6rem 0 0 0;
-}
-.form-group i {
-  font-size: 15px;
-  color: #636363;
-  padding: 0.79rem 1rem;
-  width: 5%;
-  margin: 0.5rem 0 0;
-  background-color: #f7f8fa;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-}
-
-.dashboard-form-header1 {
-  font-size: 16px;
-  padding: 0 0 0.5rem 0;
-  margin: 0 0 1rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.dashboard-form-header {
-  font-size: 16px;
-  margin: 2rem 0 1rem 0;
-  padding: 0 0 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.dashboard-card .select-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.dash-form-label {
-  width: 100%;
-  font-size: 12px;
-}
-.button-area {
-  display: flex;
-  width: 100%;
-  margin: 3rem 0;
-  padding: 20px 0;
-  border-top: 1px solid #eee;
-}
-.dashboard-card .dash-profile-btn {
-  margin: 0 2rem 0 0;
-  padding: 10px;
-  width: 20%;
-  border-radius: 0;
-  box-shadow: none;
-}

@@ -20,26 +20,16 @@ const Dashboard = ({
   ) : (
     <Fragment>
       <div className='dashboard-header'> Dashboard</div>
-      <section className='card dashboard-card'>
-        <div className='dash-component-body flex'>
-          <div></div>
-          <div className='dash-user-name'>
-            {user && user.firstname + ' ' + user.lastname}
-            <div className='dash-component-details'>
-              <i className='far fa-envelope' /> {user && user.email}
-            </div>
-          </div>
-        </div>
-      </section>
-      {profile !== null ? (
-        <Fragment>
-          <DashboardActions />
-          <Link to={`/profile/${profile._id}`}> Profile </Link>
-        </Fragment>
+      {loading || !profile ? (
+        <Fragment>No Profile</Fragment>
       ) : (
         <Fragment>
-          <p>You Have not yet Set up a profile</p>
-          <Link to='/create-profile'>Create Profile</Link>
+          Here She iS!{' '}
+          <div>
+            <Link to='/edit-profile'>
+              <button className='btn'>Edit Profile</button>
+            </Link>
+          </div>{' '}
         </Fragment>
       )}
     </Fragment>
