@@ -39,7 +39,7 @@ you must add it back in under the root directory where the api is stored.
 
   For user Authentication
 
-  > `npm install jasonwebtoken`
+  > `npm install jsonwebtoken`
 
 * Bcryptjs
 
