@@ -24,7 +24,6 @@ const Dashboard = ({
         <Fragment>No Profile</Fragment>
       ) : (
         <Fragment>
-          Here She iS!{' '}
           <div>
             <Link to='/edit-profile'>
               <button className='btn'>Edit Profile</button>
