@@ -11,7 +11,6 @@ import CreateProfile from './components/profile-forms/CreateProfile';
 import AvatarUpload from './components/avatar/AvatarUpload';
 import Profile from './components/profile/Profile';
 import PrivateRoute from './components/routing/PrivateRoute';
-import ErrorBoundries from './components/error/ErrorBoundries';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -45,18 +44,16 @@ const registerContainer = () => (
 
 const defaultContainer = () => (
   <Fragment>
-    <ErrorBoundries>
-      <Navbar />
-      <Alert />
-      <section className='container'>
-        <Route exact path='/landing' component={Landing} />
-        <PrivateRoute exact path='/create-profile' component={CreateProfile} />
-        <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-        <PrivateRoute exact path='/dashboard' component={Dashboard} />
-        <PrivateRoute exact path='/profile/:id' component={Profile} />
-        <PrivateRoute exact path='/avatar' component={AvatarUpload} />
-      </section>
-    </ErrorBoundries>
+    <Navbar />
+    <Alert />
+    <section className='container'>
+      <Route exact path='/landing' component={Landing} />
+      <PrivateRoute exact path='/create-profile' component={CreateProfile} />
+      <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+      <PrivateRoute exact path='/dashboard' component={Dashboard} />
+      <PrivateRoute exact path='/profile/:id' component={Profile} />
+      <PrivateRoute exact path='/avatar' component={AvatarUpload} />
+    </section>
   </Fragment>
 );
 

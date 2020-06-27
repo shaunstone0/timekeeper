@@ -51,14 +51,28 @@ ul {
   -ms-box-orient: horizontal;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex {
   display: flex;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
 h1 {
   font-size: 20px;
 }
 
+.align-flex-end {
+  align-items: flex-end;
+}
 .lead {
   font-size: 13px;
   color: #888;
@@ -118,6 +132,13 @@ small a {
   color: #333;
 }
 
+.success {
+  color: var(--success-color);
+}
+
+.not-success {
+  color: var(--danger-color);
+}
 .btn-primary,
 .bg-primary,
 .badge-primary,
@@ -460,3 +481,113 @@ button {
 }
 
 /* Dashboard */
+.body-div {
+  margin: 40px 0;
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dashboard-name {
+  padding: 0 0 10px 0;
+}
+.fa-mars {
+  color: #449bb1;
+}
+
+.fa-venus {
+  color: #f786f1;
+}
+
+.gender {
+  display: inline-block;
+  padding: 2px;
+}
+
+.avatar {
+  width: 200px;
+  height: 150px;
+}
+
+.avatar img {
+  height: 90%;
+  border-radius: 10px;
+}
+
+.dashboard-body {
+  width: 100%;
+}
+
+.dashboard-email {
+  font-size: 13px;
+}
+
+.dashboard-email span {
+  margin: 0 20px 0 0;
+}
+
+.dashboard-email i {
+  font-size: 16px;
+  margin: 0 5px 0 0;
+}
+
+@media only screen and (max-width: 812px) {
+  .email-flex {
+    flex-direction: column;
+  }
+}
+
+.dashboard-email .fa-envelope,
+.fa-car,
+.fa-id-card {
+  color: rgb(194, 194, 194);
+}
+.dashboard-email a {
+  margin: 5px 15px 5px 0px;
+}
+
+.dashboard-email .fa-check {
+  font-size: 10px;
+}
+
+.dashboard-email .fa-times {
+  font-size: 10px;
+}
+
+.dashboard-info {
+  border-top: 1px solid rgb(230, 230, 230);
+}
+
+.dashboard-info i {
+  font-size: 34px;
+  color: rgb(230, 227, 227);
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.info-header {
+  font-size: 13px;
+}
+
+.info-info {
+  font-size: 18px;
+}
+
+.info-box {
+  min-width: 300px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 1531px) {
+  .info-flex {
+    flex-direction: column;
+  }
+}

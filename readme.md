@@ -1,5 +1,7 @@
 ## TimeKeeper Application
 
+# This Project has been Discontinued, and will be built better and stronger using the skills that I have learned since building it! But it does give a reference from where I was, to where I am now!
+
 > An application for Human Resources to keep track of employee working times. I wanted to create an application that would give feedback to employees and HR.
 
 **This application was built by me, in part with tutorials from Brad Traversy. give him some love and suppoort! Brads [Github](https://github.com/bradtraversy)**
